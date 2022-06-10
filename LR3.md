@@ -13,6 +13,7 @@
 
 
 ### 3.Текст программы 
+```c++
 #include <iostream>
 #include <fstream>//fstream-запись и чтение, ifstream and ofstream- чтение и запись
 #include <cmath>
