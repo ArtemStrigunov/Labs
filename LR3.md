@@ -18,66 +18,49 @@
 #include <iostream>
 #include <fstream>
 #include <cmath>
-
 using namespace std;
 int main()
 {
-	double x, y, z, d, a, b, c;
-	ofstream fin;
-	ofstream fout;
-	cout << "Hello Artem Strigunov!" << endl;
 	setlocale(LC_ALL, "Russian");
-	char ch;
-
-	string F = "File.txt";
-	string T = "Text.txt"// обозначаем имя файла как букву F, что бы не тоскать его по всему коду 
-
-	fout.open(F, ofstream::app); // создаём и открываем текстовый файл для нашего проекта, что бы туда добовлять символы обращаемся к ofstream и используем команду app апы=добавить
-	if (!fout.is_open()) // проверяем открылся файл или нет 
+	double a, b, c, d;
+	ifstream ifs;
+	ofstream ofs;
+	
+	ofs.open("Text2.txt");
+	if (!ifs.is_open())// обратите внимание на эту херню
 	{
-		cout << "Ошибка открытия файла " << endl;
+		cin >> a;
+		cin >> b;
+		cin >> c;
+		ofs << a << " ";
+		ofs << b << " ";
+		ofs << c << " ";
+		d = sqrt((a * a) + (b * b) + (c * c));
+		ofs << d;
+
 	}
 	else
 	{
-		cout << "введите координаты вектора x" << endl;
-
-		cin >> x;
-		fout << x;
-		fout << " ";
-		cin >> y;
-		fout << y;
-		fout << " ";
-		cin >> z;
-		fout << z;
-
-
+		cout << "you're a loser" << endl;
 	}
-	fout.close(); // закрываем файл и освобождаем ресурс 
-	// мы записали координаты, теперь будем их считывать и в дальнейшем использовать
-
-	ifstream fout;
-	fin.open(F);
-	if (F.is_open()) // если файл НЕ открыт, то выводим следующую надпись 
+	ofs.close();
+	ofs.open("lr.txt");
+	if (!ifs.is_open())// обратите внимание на эту херню
 	{
-		cout << "ошибка открытия файла" << endl;
+		ofs << "d=" << d;
+		ofs.close();
+
 	}
-	else // если утверждение ложное, и файл не открыт т выводим другую надпись 
+	else
 	{
-		{
-			fout » a » b » c;
-			fout.close();
-			cout « " x = " « a « "; y = " « b « "; z = " « c « ";" « endl;
-			d = sqrt((a * a) + (b * b) + (c * c));
-			cout «" d = " « d « endl;
-
-			fin.open(T);
-			
-			fin « " d =" « d;
-			fin.close();
-		}
+		cout << "you're a loser" << endl;
+		
 	}
 
-		return (0);
+	system("pause");
+	return 0;
+} 
+
 	
 
 
