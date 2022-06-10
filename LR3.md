@@ -23,14 +23,14 @@ using namespace std;
 int main()
 {
 	double x, y, z, d, a, b, c;
-	ifstream fin;
+	ofstream fin;
 	ofstream fout;
 	cout << "Hello Artem Strigunov!" << endl;
 	setlocale(LC_ALL, "Russian");
 	char ch;
 
 	string F = "File.txt";
-	string T = "text.txt"// обозначаем имя файла как букву F, что бы не тоскать его по всему коду 
+	string T = "Text.txt"// обозначаем имя файла как букву F, что бы не тоскать его по всему коду 
 
 	fout.open(F, ofstream::app); // создаём и открываем текстовый файл для нашего проекта, что бы туда добовлять символы обращаемся к ofstream и используем команду app апы=добавить
 	if (!fout.is_open()) // проверяем открылся файл или нет 
@@ -55,8 +55,8 @@ int main()
 	fout.close(); // закрываем файл и освобождаем ресурс 
 	// мы записали координаты, теперь будем их считывать и в дальнейшем использовать
 
-
-	fin.open(T);
+	ifstream fout;
+	fin.open(F);
 	if (!fin.is_open()) // если файл НЕ открыт, то выводим следующую надпись 
 	{
 		cout << "ошибка открытия файла" << endl;
@@ -64,12 +64,12 @@ int main()
 	else // если утверждение ложное, и файл не открыт т выводим другую надпись 
 	{
 		{
-			fin » a » b » c;
-			fin.close();
+			fout » a » b » c;
+			fout.close();
 			cout « " x = " « a « "; y = " « b « "; z = " « c « ";" « endl;
 			d = sqrt((a * a) + (b * b) + (c * c));
 			cout «" d = " « d « endl;
-			fout.open(F);
+			fout.open(T);
 
 			fin « " d =" « d;
 			fin.close();
