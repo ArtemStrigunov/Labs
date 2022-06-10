@@ -15,15 +15,14 @@
 
 ### 3.Текст программы 
 ```c++
-// C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2022\Visual Studio Tools
 #include <iostream>
-#include <fstream>//fstream-запись и чтение, ifstream and ofstream- чтение и запись
+#include <fstream>
 #include <cmath>
 #include <string>
 using namespace std;
 int main()
 {
-	int x, y, z, d;
+	double x, y, z, d;
 	cout << "Hello Artem Strigunov!" << endl;
 	setlocale(LC_ALL, "Russian");
 	char ch;
@@ -48,8 +47,9 @@ int main()
 		cout << "введите координаты вектора z" << endl;
 		cin >> z;
 		fout << z; 
-			
-			}
+		
+		
+	}
 	fout.close(); // закрываем файл и освобождаем ресурс 
 	// мы записали координаты, теперь будем их считывать и в дальнейшем использовать
 
@@ -59,7 +59,7 @@ int main()
 	{
 		cout << "ошибка открытия файла" << endl;
 			}
-	else // если утверждение ложное, и файл не открыт ты выводим другую надпись 
+	else // если утверждение ложное, и файл не открыт т выводим другую надпись 
 	{
 		cout << "файл открыт "<< endl;
 		while (fin.get(ch))// делаем цикл и задаём переменной ch симвл из текста
@@ -69,8 +69,11 @@ int main()
 	}
 	fin.close(); // закрываем файл 
 	d = sqrt((x * x) + (y * y) + (z * z));
+	cout << " " << endl;
 	cout << "значения модуля  d=" << d;
 	
+
+
 	return (0);
 }
 ### 4. Описание работы программы
