@@ -69,8 +69,9 @@ int main()
 			cout « " x = " « a « "; y = " « b « "; z = " « c « ";" « endl;
 			d = sqrt((a * a) + (b * b) + (c * c));
 			cout «" d = " « d « endl;
-			fout.open(T);
 
+			fin.open(T);
+			
 			fin « " d =" « d;
 			fin.close();
 		}
@@ -78,7 +79,7 @@ int main()
 
 		return (0);
 	
-	
+
 
 ### 4. Описание работы программы
 
