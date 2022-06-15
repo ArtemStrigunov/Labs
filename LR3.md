@@ -25,42 +25,37 @@ int main()
 	double a, b, c, d;
 	ifstream ifs;
 	ofstream ofs;
-	
-	ofs.open("Text2.txt");
-	if (!ifs.is_open())
-	{
-		cin >> a;
-		cin >> b;
-		cin >> c;
-		ofs << a << " ";
-		ofs << b << " ";
-		ofs << c << " ";
-		d = sqrt((a * a) + (b * b) + (c * c));
-		ofs << d;
 
-	}
-	else
+	ifs.open("File.txt");
+
+	if (!ifs.is_open()) // обратите внимание на эту херню
 	{
 		cout << "you're a loser" << endl;
 	}
-	ofs.close();
+
+	else
+	{
+		ifs >> a >> b >> c;
+	}
+		d = sqrt((a * a) + (b * b) + (c * c));
+
 	ofs.open("lr.txt");
-	if (!ifs.is_open())
+
+	if (!ofs.is_open())// обратите внимание на эту херню
+	{
+		cout << "you're a loser" << endl;
+	}
+	else
 	{
 		ofs << "d=" << d;
-		ofs.close();
+	}
 
-	}
-	else
-	{
-		cout << "you're a loser" << endl;
-		
-	}
+	ofs.close();
+
 
 	system("pause");
 	return 0;
-} 
-
+}
 	
 
 
