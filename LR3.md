@@ -11,7 +11,7 @@
 
 Создать программу, которая бы брала данные из заранее записанного файла, например, input.txt (в моём случае File.txt) , в виде a,b,c и обрабатывала их, как модуль вектора с такими координатами. 
 ### Блок схема
-![схема](https://github.com/ArtemStrigunov/Labs/blob/main/%D1%81%D1%85%D0%B5%D0%BC%D0%B0%203.png)
+![схема]([https://github.com/ArtemStrigunov/Labs/blob/main/%D1%81%D1%85%D0%B5%D0%BC%D0%B0%203.png](https://github.com/ArtemStrigunov/Labs/blob/main/diagram%20(1).png))
 
 ### 3.Текст программы 
 ```c++
