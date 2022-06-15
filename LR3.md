@@ -27,7 +27,7 @@ int main()
 	ofstream ofs;
 	
 	ofs.open("Text2.txt");
-	if (!ifs.is_open())// обратите внимание на эту херню
+	if (!ifs.is_open())
 	{
 		cin >> a;
 		cin >> b;
@@ -45,7 +45,7 @@ int main()
 	}
 	ofs.close();
 	ofs.open("lr.txt");
-	if (!ifs.is_open())// обратите внимание на эту херню
+	if (!ifs.is_open())
 	{
 		ofs << "d=" << d;
 		ofs.close();
